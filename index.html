@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanskar shrestha | Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+<div class="container header-inner">
+<a class="logo" href="#home">Sanskar shrestha</a>
+<nav class="nav" id="nav">
+<a href="#home" class="nav-link">Home</a>
+<a href="#about" class="nav-link">About</a>
+<a href="#skills" class="nav-link">Skills</a>
+<a href="#projects" class="nav-link">Projects</a>
+<a href="#contact" class="nav-link">Contact</a>
+<button id="themeToggle" class="btn outline" type="button">Theme</button>
+</nav>
+<button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+</div>
+</header>
+
+<main>
+<section id="home" class="hero">
+<div class="container">
+<h1>Sanskar shrestha</h1>
+<p class="subtitle">Portfolio</p>
+<div class="hero-actions">
+<a href="#projects" class="btn primary">View Projects</a>
+<a href="#contact" class="btn secondary">Contact Me</a>
+</div>
+</div>
+</section>
+
+<section id="about" class="section">
+<div class="container">
+<h2>About</h2>
+<p>I build simple and clean web pages using HTML, CSS, and JavaScript.</p>
+</div>
+</section>
+
+<section id="skills" class="section">
+<div class="container">
+<h2>Skills</h2>
+<ul class="chips">
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Responsive Design</li>
+<li>UI</li>
+</ul>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container">
+<h2>Projects</h2>
+<div class="grid">
+<article class="card">
+<div class="card-media"></div>
+<div class="card-body">
+<h3>Landing Page</h3>
+<p>A minimal landing page with responsive layout and smooth interactions.</p>
+<a class="btn small" href="#" aria-label="Open Landing Page">Preview</a>
+</div>
+</article>
+<article class="card">
+<div class="card-media"></div>
+<div class="card-body">
+<h3>Portfolio Template</h3>
+<p>A reusable portfolio starter using only HTML, CSS, and JavaScript.</p>
+<a class="btn small" href="#" aria-label="Open Portfolio Template">Preview</a>
+</div>
+</article>
+<article class="card">
+<div class="card-media"></div>
+<div class="card-body">
+<h3>Components</h3>
+<p>A set of simple UI components built with modern CSS.</p>
+<a class="btn small" href="#" aria-label="Open Components">Preview</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="container">
+<h2>Contact</h2>
+<form id="contactForm" class="form" novalidate>
+<div class="form-row">
+<label for="name">Name</label>
+<input id="name" name="name" type="text" placeholder="Your name" required>
+</div>
+<div class="form-row">
+<label for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="you@example.com" required>
+</div>
+<div class="form-row">
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="4" placeholder="Say hello" required></textarea>
+</div>
+<button class="btn primary" type="submit">Send</button>
+<p id="formStatus" class="form-status" aria-live="polite"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© <span id="year"></span> Sanskar shrestha
+</p>
+</div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
