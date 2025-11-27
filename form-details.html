@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form Details</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="section">
+<div class="container">
+<h1>Submitted Details</h1>
+<div id="details" class="card" style="padding:1rem"></div>
+<div class="profile" style="margin-top:1rem">
+<img id="detailsPhoto" alt="Profile photo" class="profile-photo"/>
+</div>
+<div style="margin-top:1rem;display:flex;gap:.5rem">
+<a class="btn outline" href="index.html">Back</a>
+<button id="clearData" class="btn small" type="button">Clear Data</button>
+</div>
+</div>
+</main>
+<script>
+const body=document.body
+const theme=localStorage.getItem('theme')||'dark';body.setAttribute('data-theme',theme);body.classList.toggle('light-mode',theme==='light')
+const el=document.getElementById('details')
+const photo=document.getElementById('detailsPhoto')
+const raw=localStorage.getItem('contactData')
+if(raw){try{const d=JSON.parse(raw);el.innerHTML=`<p><strong>Name:</strong> ${d.name}</p><p><strong>Email:</strong> ${d.email}</p><p><strong>Message:</strong> ${d.message}</p>`}catch{el.textContent='Could not read stored data.'}}
+const storedPhoto=localStorage.getItem('profilePhoto');if(storedPhoto)photo.src=storedPhoto
+document.getElementById('clearData').addEventListener('click',()=>{localStorage.removeItem('contactData');localStorage.removeItem('profilePhoto');el.textContent='Data cleared.';photo.src=''})
+</script>
+</body>
+</html>
